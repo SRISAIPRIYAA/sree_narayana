@@ -1,0 +1,642 @@
+/* Pastel Lavender Color Scheme */
+:root {
+  --primary: #c4a8e0;
+  --primary-light: #e8dff5;
+  --accent: #d4b5f0;
+  --background: #fafbf8;
+  --card: #ffffff;
+  --foreground: #3f3f3f;
+  --muted: #f0e8f8;
+  --muted-foreground: #888888;
+  --border: #e8dff5;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand h1 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--foreground);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 0.4rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--foreground);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, rgba(196, 168, 224, 0.1) 0%, rgba(212, 181, 240, 0.1) 100%);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.hero-text {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.content-section {
+  margin-bottom: 2.5rem;
+}
+
+/* Card */
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--foreground);
+}
+
+.card-content p {
+  line-height: 1.6;
+}
+
+.highlight {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Subsections */
+.subsection-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.subsection-subtitle {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style: disc inside;
+  color: var(--muted-foreground);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+/* Workmen List */
+.workmen-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.workmen-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.75rem;
+  background-color: var(--muted);
+  border-radius: 0.375rem;
+}
+
+.workmen-role {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.workmen-experience {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.workmen-count {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/* Address & Contact */
+.address-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.address-text {
+  color: var(--foreground);
+  line-height: 1.8;
+}
+
+.address-map {
+  display: block;
+  text-decoration: none;
+}
+
+.address-map img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  transition: opacity 0.3s ease;
+}
+
+.address-map:hover img {
+  opacity: 0.9;
+}
+
+.contact-label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.contact-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  word-break: break-all;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+}
+
+/* Location Map */
+.location-map {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* Clients Grid */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.client-card {
+  background-color: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.client-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(196, 168, 224, 0.15);
+  transform: translateY(-2px);
+}
+
+.client-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.client-description {
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+}
+
+/* Benefits List */
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  padding: 1.5rem;
+  background-color: var(--muted);
+  border-radius: 0.5rem;
+}
+
+.benefit-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+}
+
+/* Materials Grid */
+.materials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.material-tag {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Machines Grid */
+.machines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.machine-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.machine-card:hover {
+  box-shadow: 0 8px 16px rgba(196, 168, 224, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Added machine image styling */
+.machine-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  background-color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.machine-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.375rem;
+  transition: transform 0.3s ease;
+}
+
+.machine-card:hover .machine-image img {
+  transform: scale(1.05);
+}
+
+.machine-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.machine-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.machine-description {
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.machine-specs {
+  list-style: none;
+  padding-left: 0;
+}
+
+.machine-specs li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--foreground);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.machine-specs li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Capabilities */
+.capabilities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.capability-item {
+  padding: 1.5rem;
+  background-color: var(--muted);
+  border-radius: 0.5rem;
+}
+
+.capability-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.capability-item .list {
+  margin-left: 1.5rem;
+}
+
+/* Specs Table */
+.specs-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.specs-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: var(--muted);
+  border-radius: 0.375rem;
+  align-items: center;
+}
+
+.specs-label {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.specs-value {
+  color: var(--foreground);
+}
+
+/* Instruments Grid */
+.instruments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.instrument-card {
+  background-color: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.instrument-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(196, 168, 224, 0.15);
+  transform: translateY(-2px);
+}
+
+.instrument-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.instrument-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1.4;
+}
+
+.machine-quantity {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+}
+
+.certification-box {
+  background: linear-gradient(135deg, rgba(196, 168, 224, 0.1) 0%, rgba(232, 223, 245, 0.3) 100%);
+  border: 2px solid var(--primary);
+  text-align: center;
+}
+
+.certification-text {
+  font-size: 1.1rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.certification-badge {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted-foreground);
+  margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--card);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .address-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .main-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .clients-grid,
+  .machines-grid,
+  .benefits-list,
+  .capabilities-list {
+    grid-template-columns: 1fr;
+  }
+
+  .machine-image {
+    height: 150px;
+  }
+
+  .location-map iframe {
+    height: 300px;
+  }
+}
